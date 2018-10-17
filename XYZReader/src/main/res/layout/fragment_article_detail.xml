@@ -16,20 +16,20 @@
             <FrameLayout
                 android:id="@+id/photo_container"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/photo_placeholder">
                 <!--suppress AndroidLintContentDescription -->
                 <ImageView
                     android:id="@+id/photo"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="310dp"
+                    android:scaleType="fitXY"
                      />
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="112dp"
                     android:background="@drawable/photo_background_protection" />
-
             </FrameLayout>
 
             <com.example.xyzreader.ui.MaxWidthLinearLayout
@@ -46,7 +46,7 @@
                     android:id="@+id/meta_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#333"
+                    android:background="@color/theme_primary_dark"
                     android:layout_gravity="bottom"
                     android:orientation="vertical"
                     android:paddingLeft="@dimen/detail_inner_horiz_margin"
@@ -78,12 +78,14 @@
                 <TextView
                     android:id="@+id/article_body"
                     style="?android:attr/textAppearanceMedium"
+                    android:background="#ffffff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
-                    android:layout_marginRight="@dimen/detail_inner_horiz_margin"
                     android:paddingBottom="@dimen/detail_body_bottom_margin"
-                    android:textColor="@color/ltgray"
+                    android:textColor="#000000"
+                    android:textStyle="normal"
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif-condensed"
                     android:textColorLink="@color/theme_accent"
                     android:textSize="@dimen/detail_body_text_size"
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
